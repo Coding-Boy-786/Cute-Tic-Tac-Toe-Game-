@@ -12,14 +12,6 @@ This is a beginner-friendly project to learn JavaScript DOM manipulation, game l
 
 ---
 
-## 📸 Preview
-
-> Add screenshot here  
-Example:
-![Game Screenshot](screenshot.png)
-
----
-
 ## ✨ Features
 
 - 🎨 Cute and modern UI design

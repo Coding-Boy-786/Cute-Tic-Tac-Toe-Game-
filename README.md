@@ -6,9 +6,9 @@ This is a beginner-friendly project to learn JavaScript DOM manipulation, game l
 ---
 
 ## 🚀 Live Demo
-👉 https://yourusername.github.io/tic-tac-toe-game/
+[👉 https://yourusername.github.io/tic-tac-toe-game/](https://coding-boy-786.github.io/Cute-Tic-Tac-Toe-Game-/)
 
-(Replace with your GitHub Pages link)
+
 
 ---
 
@@ -38,6 +38,5 @@ This is a beginner-friendly project to learn JavaScript DOM manipulation, game l
 
 ---
 
-## Live Demo Link
-https://coding-boy-786.github.io/Cute-Tic-Tac-Toe-Game-/
+
 

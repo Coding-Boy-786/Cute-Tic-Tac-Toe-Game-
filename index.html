@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cute Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Quicksand:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="winnerOverlay" class="overlay">
+        <div class="modal">
+            <h1 id="winnerMsg">Yay! Player X Won! 🌸</h1>
+            <button class="play-again" onclick="resetGame()">Play Again</button>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <h1 class="logo">Tic-Tac-Toe</h1>
+        <div id="status">Current Player: <span>X</span></div>
+        
+        <div class="board" id="board">
+            <div class="cell" data-index="0"></div>
+            <div class="cell" data-index="1"></div>
+            <div class="cell" data-index="2"></div>
+            <div class="cell" data-index="3"></div>
+            <div class="cell" data-index="4"></div>
+            <div class="cell" data-index="5"></div>
+            <div class="cell" data-index="6"></div>
+            <div class="cell" data-index="7"></div>
+            <div class="cell" data-index="8"></div>
+        </div>
+
+        <button class="reset-btn" id="resetBtn">Reset Game</button>
+    </div>
+
+    <audio id="popSound" src="https://assets.mixkit.co/active_storage/sfx/2571/2571-preview.mp3"></audio>
+    <audio id="winSound" src="https://assets.mixkit.co/active_storage/sfx/2019/2019-preview.mp3"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>

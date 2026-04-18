@@ -1,0 +1,215 @@
+:root {
+    --pink: #ffafcc;
+    --dark-pink: #fb6f92;
+    --mint: #b9fbc0;
+    --soft-white: #fdf0d5;
+    --text-color: #5e548e;
+}
+
+body {
+    background-color: #ffdeeb;
+    font-family: 'Quicksand', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: var(--text-color);
+}
+
+.wrapper {
+    text-align: center;
+    background: white;
+    padding: 30px;
+    border-radius: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.logo {
+    font-family: 'Fredoka One', cursive;
+    color: var(--dark-pink);
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+}
+
+#status {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+#status span { color: var(--dark-pink); }
+
+/* The Grid Board */
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 90px);
+    grid-template-rows: repeat(3, 90px);
+    gap: 12px;
+    margin: 0 auto 20px;
+}
+
+.cell {
+    background: var(--soft-white);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    font-family: 'Fredoka One', cursive;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.cell:hover {
+    transform: scale(1.05);
+    background: #faedcd;
+}
+
+/* X and O Styles */
+.cell.x { color: var(--dark-pink); }
+.cell.o { color: #48cae4; }
+
+/* Buttons */
+.reset-btn, .play-again {
+    background-color: var(--dark-pink);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(251, 111, 146, 0.3);
+    transition: 0.3s;
+}
+
+.reset-btn:hover { background-color: #ff4d6d; }
+
+/* Modal/Overlay Popup */
+.overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(255, 175, 204, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.modal {
+    background: white;
+    padding: 40px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+.modal h1 { color: var(--dark-pink); margin-bottom: 20px; }
+
+
+/* 🌸 FULL RESPONSIVE UPGRADE */
+
+/* Tablets */
+@media (max-width: 900px) {
+    .wrapper {
+        width: 90%;
+        padding: 25px;
+    }
+
+    .board {
+        grid-template-columns: repeat(3, 80px);
+        grid-template-rows: repeat(3, 80px);
+        gap: 10px;
+    }
+
+    .cell {
+        font-size: 2.2rem;
+    }
+}
+
+/* Mobile phones */
+@media (max-width: 600px) {
+    body {
+        padding: 15px;
+        align-items: flex-start;
+    }
+
+    .wrapper {
+        width: 100%;
+        margin-top: 20px;
+        padding: 18px;
+        border-radius: 18px;
+    }
+
+    .logo {
+        font-size: 1.8rem;
+    }
+
+    #status {
+        font-size: 1rem;
+    }
+
+    .board {
+        grid-template-columns: repeat(3, 70px);
+        grid-template-rows: repeat(3, 70px);
+        gap: 8px;
+    }
+
+    .cell {
+        font-size: 2rem;
+        border-radius: 12px;
+    }
+
+    .reset-btn, .play-again {
+        width: 100%;
+        padding: 12px;
+        font-size: 1rem;
+    }
+
+    .modal {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .modal h1 {
+        font-size: 1.4rem;
+    }
+}
+/* 🔻 SMALLER BOARD (Desktop default tweak) */
+.board {
+    grid-template-columns: repeat(3, 75px);
+    grid-template-rows: repeat(3, 75px);
+    gap: 10px;
+}
+
+.cell {
+    font-size: 2rem;
+}
+
+/* 📱 Mobile - even smaller boxes */
+@media (max-width: 600px) {
+    .board {
+        grid-template-columns: repeat(3, 60px);
+        grid-template-rows: repeat(3, 60px);
+        gap: 6px;
+    }
+
+    .cell {
+        font-size: 1.7rem;
+        border-radius: 10px;
+    }
+}
+
+/* 📱 Very small phones */
+@media (max-width: 400px) {
+    .board {
+        grid-template-columns: repeat(3, 50px);
+        grid-template-rows: repeat(3, 50px);
+        gap: 5px;
+    }
+
+    .cell {
+        font-size: 1.4rem;
+    }
+}
